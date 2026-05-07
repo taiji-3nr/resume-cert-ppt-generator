@@ -2,6 +2,7 @@
 __pycache__/
 *.pyc
 *.egg-info/
+tools/
 
 # Local generated build internals
 out/pptx_build/
