@@ -2,20 +2,18 @@
 
 履歴書の「免許・資格」欄をもとに、資格取得ヒストリーのPowerPointを生成するための作業フォルダです。
 
-## 現在の成果物
+## リポジトリで管理する対象
 
-- `out/資格取得ヒストリー_太地稔_20260103.pptx`
-  - PowerShell/OpenXMLで作成した現行版のPowerPoint
-- `out/資格取得ヒストリー_太地稔_20260103_python.pptx`
-  - `python-pptx`で再生成したPowerPoint
-- `out/assets/certification-history-bg.png`
-  - ChatGPT画像生成で作成した背景画像
 - `data/certifications.json`
   - 履歴書から抽出した資格取得データ
 - `build_cert_history_ppt.ps1`
   - Pythonなしでpptxを作るためのPowerShell版スクリプト
 - `src/resume_cert_ppt/generate_ppt.py`
-  - `python-pptx`へ移行するためのPython版スクリプト
+  - `python-pptx`でPowerPointを生成するPython版スクリプト
+- `README.md` / `requirements.txt` / `setup.ps1` / `validate.ps1`
+  - 実行手順・依存関係・検証手順
+
+`.pptx` や `.png` などの生成成果物はPRに含めず、各ローカル環境で再生成してください。
 
 ## Windowsローカルでの推奨セットアップ
 
@@ -69,7 +67,7 @@ GitHubへ渡す具体的な手順は [GITHUB_UPLOAD_GUIDE.md](GITHUB_UPLOAD_GUID
 
 ## ローカル検証
 
-現行成果物、Python版成果物、データの整合性は次で確認できます。
+生成成果物はローカルで再生成したうえで、データと出力の整合性を次で確認できます。
 
 ```powershell
 powershell -ExecutionPolicy Bypass -File .\validate.ps1
