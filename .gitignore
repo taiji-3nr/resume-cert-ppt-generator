@@ -9,5 +9,6 @@ out/pptx_build/
 # Keep final deliverables under out/, but ignore common temporary exports.
 out/*.pdf
 out/*.tmp
+out/*.bundle
 out/web_codex_package/
 out/resume-cert-ppt-web-codex-package.zip
