@@ -6,6 +6,8 @@
 
 - `out/資格取得ヒストリー_太地稔_20260103.pptx`
   - PowerShell/OpenXMLで作成した現行版のPowerPoint
+- `out/資格取得ヒストリー_太地稔_20260103_python.pptx`
+  - `python-pptx`で再生成したPowerPoint
 - `out/assets/certification-history-bg.png`
   - ChatGPT画像生成で作成した背景画像
 - `data/certifications.json`
@@ -67,7 +69,7 @@ GitHubへ渡す具体的な手順は [GITHUB_UPLOAD_GUIDE.md](GITHUB_UPLOAD_GUID
 
 ## ローカル検証
 
-Pythonが未導入でも、現行成果物とデータの整合性は次で確認できます。
+現行成果物、Python版成果物、データの整合性は次で確認できます。
 
 ```powershell
 powershell -ExecutionPolicy Bypass -File .\validate.ps1

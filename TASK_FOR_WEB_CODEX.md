@@ -16,6 +16,7 @@ E:\My Resources\My Historys\履歴書_太地稔_20260103.docx
 
 ```text
 out/資格取得ヒストリー_太地稔_20260103.pptx
+out/資格取得ヒストリー_太地稔_20260103_python.pptx
 ```
 
 ## 期待する成果

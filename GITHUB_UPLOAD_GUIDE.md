@@ -1,6 +1,8 @@
 # GitHubへ渡す手順
 
-このPCでは `git` と `gh` が見つからないため、現時点では手動アップロードが最短です。
+このPCにはGit for Windowsを導入済みで、ローカルリポジトリは `main` ブランチの初回コミットまで完了しています。
+
+GitHubコネクタから見えるリポジトリは0件のため、現時点ではGitHub側で新規リポジトリを作成してURLを取得する必要があります。
 
 ## 手順
 
@@ -26,16 +28,11 @@
 
 既存リポジトリをCodexに扱わせるには、GitHub側でCodex/GitHub Appに対象リポジトリへのアクセスを許可してください。
 
-## ローカルでgitを使う場合
+## ローカルでpushする場合
 
-このPCにGit for Windowsを入れると、次の流れにできます。
+GitHubで空のリポジトリを作成したら、次を実行します。
 
 ```powershell
-git init
-git add .
-git commit -m "Add resume certification PowerPoint generator"
-git branch -M main
 git remote add origin https://github.com/<user>/<repo>.git
 git push -u origin main
 ```
-
