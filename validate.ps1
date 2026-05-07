@@ -21,7 +21,10 @@ foreach ($script in @('setup.ps1', 'build_cert_history_ppt.ps1', 'validate.ps1')
 
 Add-Type -AssemblyName System.IO.Compression.FileSystem
 
-function Test-Pptx($path, $label) {
+$imagePath = Join-Path $root 'out\assets\certification-history-bg.png'
+$expectImageMedia = Test-Path $imagePath
+
+function Test-Pptx($path, $label, $expectMedia) {
   if (-not (Test-Path $path)) {
     throw "PowerPoint output was not found: $path"
   }
@@ -31,7 +34,7 @@ function Test-Pptx($path, $label) {
     $slides = ($zip.Entries | Where-Object { $_.FullName -like 'ppt/slides/slide*.xml' }).Count
     $media = ($zip.Entries | Where-Object { $_.FullName -like 'ppt/media/*' }).Count
     if ($slides -ne 5) { throw "$label expected 5 slides, got $slides." }
-    if ($media -lt 1) { throw "$label expected at least 1 embedded media file, got $media." }
+    if ($expectMedia -and $media -lt 1) { throw "$label expected at least 1 embedded media file, got $media." }
 
     foreach ($entry in $zip.Entries | Where-Object { $_.FullName -like '*.xml' -or $_.FullName -like '*.rels' }) {
       $reader = [System.IO.StreamReader]::new($entry.Open())
@@ -46,9 +49,10 @@ function Test-Pptx($path, $label) {
   }
 }
 
-Test-Pptx $pptPath 'OpenXML PowerShell output'
-Test-Pptx $pythonPptPath 'Python output'
+Test-Pptx $pptPath 'OpenXML PowerShell output' $expectImageMedia
+Test-Pptx $pythonPptPath 'Python output' $expectImageMedia
 
 Write-Host 'Validation OK'
 Write-Host "certifications=$($data.certifications.Count)"
-Write-Host 'pptx outputs=2 slides=5 media>=1'
+$mediaRule = if ($expectImageMedia) { 'media>=1' } else { 'media>=0 (no background image)' }
+Write-Host "pptx outputs=2 slides=5 $mediaRule"

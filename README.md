@@ -74,3 +74,33 @@ GitHubへ渡す具体的な手順は [GITHUB_UPLOAD_GUIDE.md](GITHUB_UPLOAD_GUID
 ```powershell
 powershell -ExecutionPolicy Bypass -File .\validate.ps1
 ```
+
+## 背景画像をリポジトリ管理しない場合
+
+このリポジトリは、`out/assets/certification-history-bg.png` が存在しないクリーンチェックアウト環境でも動作します。
+
+- `python-pptx`版 (`src/resume_cert_ppt/generate_ppt.py`): 背景画像が無い場合は淡色の無地背景で生成
+- PowerShell/OpenXML版 (`build_cert_history_ppt.ps1`): 背景画像が無い場合は同様に無地背景で生成
+- `validate.ps1`: 背景画像がある場合のみ `ppt/media` 内の画像埋め込みを必須チェック
+
+### 背景画像の再生成手順（任意）
+
+1. `data/image_prompt.txt` のプロンプトを使って任意の画像生成ツールで背景画像を生成する。
+2. 生成したPNGを次のパスに保存する。
+
+```text
+out/assets/certification-history-bg.png
+```
+
+3. その後、PowerPointを再生成する。
+
+```powershell
+.\.venv\Scripts\python.exe -m resume_cert_ppt.generate_ppt
+powershell -ExecutionPolicy Bypass -File .\build_cert_history_ppt.ps1
+```
+
+4. 最後に検証を実行する。
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\validate.ps1
+```
