@@ -1,0 +1,141 @@
+{
+  "person": {
+    "name": "太地 稔",
+    "resume_date": "2026-01-03",
+    "source": "履歴書_太地稔_20260103.docx"
+  },
+  "theme": {
+    "title": "資格取得ヒストリー",
+    "period": "1978-2022",
+    "message": "作る経験を、教える価値へ。",
+    "summary": "情報処理から教育・Office・認定インストラクターへ、実務と指導をつなぐ資格の軌跡"
+  },
+  "certifications": [
+    {
+      "year": 1978,
+      "month": 2,
+      "name": "第二種情報処理技術者",
+      "current_name": "基本情報処理技術者",
+      "issuer_or_family": "情報処理技術者試験",
+      "result": "合格",
+      "category": "IT基礎・業務理解"
+    },
+    {
+      "year": 1995,
+      "month": 12,
+      "name": "初級システムアドミニストレータ",
+      "current_name": "ITパスポート",
+      "issuer_or_family": "情報処理技術者試験",
+      "result": "合格",
+      "category": "IT基礎・業務理解"
+    },
+    {
+      "year": 1997,
+      "month": 7,
+      "name": "データベーススペシャリスト",
+      "current_name": null,
+      "issuer_or_family": "情報処理技術者試験",
+      "result": "合格",
+      "category": "専門技術"
+    },
+    {
+      "year": 2016,
+      "month": "2-11",
+      "name": "MOS 2013 Master (Excelコース)",
+      "current_name": null,
+      "issuer_or_family": "Microsoft Office Specialist",
+      "result": "認定",
+      "category": "Office実務"
+    },
+    {
+      "year": 2016,
+      "month": "2-11",
+      "name": "MOS (Excel / Word / PowerPoint / Access)",
+      "current_name": null,
+      "issuer_or_family": "Microsoft Office Specialist",
+      "result": "合格",
+      "category": "Office実務"
+    },
+    {
+      "year": 2017,
+      "month": 7,
+      "name": "ICT支援員能力認定",
+      "current_name": null,
+      "issuer_or_family": "ICT支援員",
+      "result": "合格",
+      "category": "指導・教育"
+    },
+    {
+      "year": 2018,
+      "month": 8,
+      "name": "サーティファイ Jプログラミング検定 Scratch部門 Gold",
+      "current_name": null,
+      "issuer_or_family": "サーティファイ",
+      "result": "合格",
+      "category": "プログラミング教育"
+    },
+    {
+      "year": 2019,
+      "month": 3,
+      "name": "サーティファイ Jプログラミング検定 Scratch部門 Silver",
+      "current_name": null,
+      "issuer_or_family": "サーティファイ",
+      "result": "合格",
+      "category": "プログラミング教育"
+    },
+    {
+      "year": 2019,
+      "month": 3,
+      "name": "サーティファイ Excel 1級",
+      "current_name": null,
+      "issuer_or_family": "サーティファイ",
+      "result": "合格",
+      "category": "Office実務"
+    },
+    {
+      "year": 2020,
+      "month": 4,
+      "name": "ICTプロフィエンシー検定試験3級 (P検3級)",
+      "current_name": null,
+      "issuer_or_family": "P検",
+      "result": "合格",
+      "category": "IT基礎・業務理解"
+    },
+    {
+      "year": 2020,
+      "month": 7,
+      "name": "サーティファイ Access 1級",
+      "current_name": null,
+      "issuer_or_family": "サーティファイ",
+      "result": "合格",
+      "category": "Office実務"
+    },
+    {
+      "year": 2022,
+      "month": 3,
+      "name": "サーティファイ 認定インストラクター",
+      "current_name": null,
+      "issuer_or_family": "サーティファイ",
+      "result": "認定",
+      "category": "指導・教育"
+    },
+    {
+      "year": 2022,
+      "month": 4,
+      "name": "サーティファイ PowerPoint上級",
+      "current_name": null,
+      "issuer_or_family": "サーティファイ",
+      "result": "合格",
+      "category": "Office実務"
+    },
+    {
+      "year": 2022,
+      "month": 6,
+      "name": "サーティファイ Excelビジネススキル エキスパート",
+      "current_name": null,
+      "issuer_or_family": "サーティファイ",
+      "result": "合格",
+      "category": "Office実務"
+    }
+  ]
+}

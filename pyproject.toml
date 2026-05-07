@@ -1,0 +1,15 @@
+[project]
+name = "resume-cert-ppt"
+version = "0.1.0"
+description = "Generate a PowerPoint certification history from resume qualification data."
+requires-python = ">=3.11"
+dependencies = [
+  "python-pptx>=1.0.2",
+  "Pillow>=10.0.0",
+  "lxml>=5.0.0"
+]
+
+[tool.setuptools]
+packages = ["resume_cert_ppt"]
+package-dir = {"" = "src"}
+
